@@ -5,7 +5,7 @@ const { RevModel } = require('../models');
 
 router.post('/create', validateJWT, async (req, res) => {
   const { title, date, entry } = req.body.rev;
-  const { id } = req.user.id;
+  const { id } = req.user;
   const revEntry = {
     title,
     date,
