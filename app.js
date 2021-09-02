@@ -3,7 +3,7 @@ const Express = require("express");
 const app = Express();
 const dbConnection = require ("./db");
 
-use.use(Express.json());
+app.use(Express.json());
 
 app.use(require("./middleware/headers"))
 
