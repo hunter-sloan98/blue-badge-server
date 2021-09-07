@@ -19,7 +19,7 @@ router.post('/signup', async (req, res) => {
     res.status(201).json({
       message: "User Created",
       user: User,
-      sessionToken: `Bearer ${token}`
+      sessionToken: token
     });
   } catch (err) {
     if (err instanceof UniqueConstraintError) {
