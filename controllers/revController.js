@@ -32,7 +32,7 @@ router.get('/all', async (req, res) => {
 });
 
 
-router.get('/mine', validateJWT, async (req, res) => {
+router.get('/', validateJWT, async (req, res) => {
   let { id } = req.user;
   try {
     const userRev = await RevModel.findAll({
