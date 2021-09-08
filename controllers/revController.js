@@ -48,7 +48,7 @@ router.get('/', validateJWT, async (req, res) => {
 
 
 router.put('/update/:id', validateJWT, async (req, res) => {
-  const { title, date, entry} = req.body;
+  const { title, date, entry} = req.body.rev;
   const revId = req.params.id;
   const userId = req.user.id;
 
